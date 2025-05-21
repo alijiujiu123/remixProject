@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/EIP2535/ArrayUtils.sol": "ArrayUtils"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proxy/EIP2535/ArrayUtils.sol": {
+			"keccak256": "0x23d6077b123f15c3b06fb73a3b96e800e6573be4fb4cfaf0f0371e2f5918332b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://405cdac8f0e19ee818d7c6e3c691054f754930efe5a34f5d2967ea5d090314e1",
+				"dweb:/ipfs/Qmcou61Huivr1F83JVxe3ce7c6noFJwLpUHGnnSXy3EBGs"
+			]
+		}
+	},
+	"version": 1
+}

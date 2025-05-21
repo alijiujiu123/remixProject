@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_logicAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newLogicAddress",
+						"type": "address"
+					}
+				],
+				"name": "upgradeLogicAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/MyUpgradeProxy.sol": "MyUpgradeProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC1967Utils.sol": {
+			"keccak256": "0x19a9b8afcd4c26995a7ce0f4e4a1fdde6c63147d7422f59cfa24ba2e2d1f6350",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5485e5aa35f6b42ca1bef7540d96c14bc910eb031c5ec67342efefd014402c78",
+				"dweb:/ipfs/Qmb7JLHkKxh4rKy7xd75AVfAbNGwGYoenGqcgYb9P9eXqM"
+			]
+		},
+		"contracts/LogLibrary.sol": {
+			"keccak256": "0xc50e514cfef3bf17d4c7cf176ae622cecc29ab0d699954cf389cd6753bd111fb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b940b4d86df62b787debe5eb4800128a7edb14a4f3065214849c6ae086066ce0",
+				"dweb:/ipfs/QmcsCZNSj4uQymyNRJbYN45m933ZuT9pEcguT3WSdFNJMK"
+			]
+		},
+		"contracts/MyUpgradeProxy.sol": {
+			"keccak256": "0x5d6524d443e2db1080945a0d1c5420269fdb6f80eac21ad84fbcaf152034c1f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://093126f3589bb12b1f4a60ab0988d691e37424b201399df2678463cbbcf94950",
+				"dweb:/ipfs/QmdAL71dERiesnXkePbv9eZnMxUvidDdG7rdxCtEBdyi4r"
+			]
+		}
+	},
+	"version": 1
+}

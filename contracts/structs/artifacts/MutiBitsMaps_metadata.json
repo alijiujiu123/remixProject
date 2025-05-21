@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfByteValueRange",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfFourBitValueRange",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfTwoBitValueRange",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/structs/MutiBitsMaps.sol": "MutiBitsMaps"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/structs/MutiBitsMaps.sol": {
+			"keccak256": "0x1e11c8fca31e357cece824be1641d6925274e288c7defa32225d4739d1837374",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5cea48701707191eaee1b2a1f80c1298968ce5e55cc50fa9f225df705959eef1",
+				"dweb:/ipfs/QmYQAMpNYjgAnhTZ3YCTDz9oZJsc5Jk3PbcEaqNuBgH2gn"
+			]
+		}
+	},
+	"version": 1
+}

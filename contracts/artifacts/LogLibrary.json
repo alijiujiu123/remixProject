@@ -1,0 +1,270 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220854380e89a0f224ac4b5e54aa33c177bc7f9e56c8b21af35ad576463352bf09d64736f6c634300081a0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP6 NUMBER DUP1 0xE8 SWAP11 0xF 0x22 BLOBBASEFEE 0xC4 0xB5 0xE5 BLOBBASEFEE LOG3 EXTCODECOPY OR PUSH28 0xC7F9E56C8B21AF35AD576463352BF09D64736F6C634300081A003300 ",
+			"sourceMap": "57:2246:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220854380e89a0f224ac4b5e54aa33c177bc7f9e56c8b21af35ad576463352bf09d64736f6c634300081a0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP6 NUMBER DUP1 0xE8 SWAP11 0xF 0x22 BLOBBASEFEE 0xC4 0xB5 0xE5 BLOBBASEFEE LOG3 EXTCODECOPY OR PUSH28 0xC7F9E56C8B21AF35AD576463352BF09D64736F6C634300081A003300 ",
+			"sourceMap": "57:2246:0:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"printAddressLog(string memory,address)": "infinite",
+				"printAddressValueLog(string memory,address,uint256)": "infinite",
+				"printBoolLog(string memory,bool)": "infinite",
+				"printBytes32ArrayLog(string memory,bytes32[] memory)": "infinite",
+				"printBytes32Log(string memory,bytes32)": "infinite",
+				"printBytesLog(string memory,bytes memory)": "infinite",
+				"printLog(string memory)": "infinite",
+				"printStringLog(string memory,string memory)": "infinite",
+				"printUint256ArrayLog(string memory,uint256[] memory)": "infinite",
+				"printUint256KeyValueLog(string memory,uint256,uint256)": "infinite",
+				"printUint256Log(string memory,uint256)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "value",
+					"type": "address"
+				}
+			],
+			"name": "PrintAddressLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": true,
+					"internalType": "address",
+					"name": "key",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "PrintAddressValueLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "bool",
+					"name": "data",
+					"type": "bool"
+				}
+			],
+			"name": "PrintBoolLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes32[]",
+					"name": "data",
+					"type": "bytes32[]"
+				}
+			],
+			"name": "PrintBytes32ArrayLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes32",
+					"name": "data",
+					"type": "bytes32"
+				}
+			],
+			"name": "PrintBytes32Log",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				}
+			],
+			"name": "PrintLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "value",
+					"type": "string"
+				}
+			],
+			"name": "PrintStringLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256[]",
+					"name": "data",
+					"type": "uint256[]"
+				}
+			],
+			"name": "PrintUint256ArrayLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "key",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "value",
+					"type": "uint256"
+				}
+			],
+			"name": "PrintUint256KeyValueLog",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "string",
+					"name": "desc",
+					"type": "string"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "data",
+					"type": "uint256"
+				}
+			],
+			"name": "PrintUint256Log",
+			"type": "event"
+		}
+	]
+}

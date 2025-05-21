@@ -1,0 +1,136 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "CustomError",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "mode",
+						"type": "uint8"
+					}
+				],
+				"name": "revertAssembly",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "mode",
+						"type": "uint8"
+					}
+				],
+				"name": "revertNormal",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "mode",
+						"type": "uint8"
+					}
+				],
+				"name": "willRevert",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"revertAssembly(uint8)": {
+					"notice": "捕获 willRevert() 的异常并使用 assembly revert() 原样转发"
+				},
+				"revertNormal(uint8)": {
+					"notice": "捕获 willRevert() 的异常并使用 revert(reason) 转发"
+				},
+				"willRevert(uint8)": {
+					"notice": "原始函数，根据模式抛出不同的异常"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RevertDemo.sol": "RevertDemo"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RevertDemo.sol": {
+			"keccak256": "0x83bd6d362fec13cecf8becd2a6a2587375490883811388d7f0f41554f3f16634",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bf88d0014036decb7381a9b8090ab7255005a6504623ed43f9f186b65c18462a",
+				"dweb:/ipfs/Qmd7sStcCSHEyt8p6Um9dZ1YWFDZcU9LyHv3mhpcpnnJ7B"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,169 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "allPairs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "calculateCreate2Address",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pairAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "create2Pair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pairAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					}
+				],
+				"name": "createPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pairAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "getPair",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PairFactory.sol": "PairFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Pair.sol": {
+			"keccak256": "0xe1ea7c5f17e6eb4e38e230e3884a70449e7f58e49dab009c5b00c85ad0f6e962",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://caa6ff9cf6d5cdabf33220ef27858dc2bcd2fcbad8ebd7a94b60c68d132b7ec5",
+				"dweb:/ipfs/QmPPZYwkN36zGQfayQiZdmnexUSwRYHTYNNVXfbmDrGjA8"
+			]
+		},
+		"contracts/PairFactory.sol": {
+			"keccak256": "0xc768a614d10c998b22c991901d89ea36ae5c86ed9c6c8c978aac4392b93aa24a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3c40ce49e3b33bfa3e7a680774aeb4321a9c8f91d384622225175ea50ca08ea4",
+				"dweb:/ipfs/QmaJPgDdWrrVsk16vwr1FPsrQo2d5ZEc8qQkfo2YnHmSZE"
+			]
+		}
+	},
+	"version": 1
+}

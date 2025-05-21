@@ -1,0 +1,346 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "diamondCutAddress",
+						"type": "address"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "facetAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum IDiamond.FacetCutAction",
+								"name": "action",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "functionSelectors",
+								"type": "bytes4[]"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct IDiamond.FacetCut[]",
+						"name": "_diamondCut",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "ok",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "resultData",
+						"type": "bytes"
+					}
+				],
+				"name": "InitCalldataExecute",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicOneAddSelector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicOneContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicOneRemoveSelector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicOneV2Change",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicOneV2Replace",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicTwoContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicTwoRemoveAllSelector",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicTwoV2Change",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicTwoV3Change",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_diamondProxyAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_facetAddress",
+						"type": "address"
+					}
+				],
+				"name": "registLogicTwoV3Remove",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/EIP2535/RegistLogicContract.sol": "RegistLogicContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"contracts/proxy/EIP2535/IDiamond.sol": {
+			"keccak256": "0x152a5941fe585b619dd0f433eca108ddcfe371910bd848c33e558acfa7ab0cd3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://616d35a7f4e29c9023ff667e0924436e7e88ac24bbd67f1f8b5e175a805241ab",
+				"dweb:/ipfs/QmPnsF7pCMgWSUdK261YoNpAT36DhHuMWocX5HuKRh96bo"
+			]
+		},
+		"contracts/proxy/EIP2535/IDiamondCut.sol": {
+			"keccak256": "0xb1dcb551aadacc6c46c8fdf069651dd1a6d36f418ebd63bab88b3c4aa9a29c7e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cec7d85802c2f367d588d4d6493deea2dce0762c13977c1280dca93f770560da",
+				"dweb:/ipfs/QmZ472KAtqjuLFvx7rJEEq9STjfRdzR9kuC8Lv2SMHHbgu"
+			]
+		},
+		"contracts/proxy/EIP2535/LogicOneFacet.sol": {
+			"keccak256": "0xad4e58c9deac0342eea2e6cdabd32c0d8d1fb1bc65187361ed569748af520e6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d5b4c7d4afc012014418403011a8645a16e6823599ef33708822ece95c95ff48",
+				"dweb:/ipfs/QmbJZvun6fUeY9XRkBBMesfMLrPinyjfsEf3Xfssy42NSt"
+			]
+		},
+		"contracts/proxy/EIP2535/LogicOneV2Facet.sol": {
+			"keccak256": "0x5eb09d67ddc2e495a4536710ce95e8f0548076fd05fadc9d0986fe1cb16d1a64",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b6196abc54f761210166a9a32a6f5774aed6bdb6315d8fc6fba7a7ba828f8302",
+				"dweb:/ipfs/QmU1piK64dXQrcbTga1YT4qWWuWnvvtiMrSak39PJMsszb"
+			]
+		},
+		"contracts/proxy/EIP2535/LogicTwoFacet.sol": {
+			"keccak256": "0xd20b5350e432b0ef487bb8aa0de69ca961af4ad82dadf0b022cf6b6ce3b1776e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0886e2bb4f1bcbc2b79f128c2e43a437aedf644fb128d77ce8b1410e7754d5b5",
+				"dweb:/ipfs/QmXrqqf7TgisLSgoBmQnZRC1TP9siecbVXEBzHcQgPJpWw"
+			]
+		},
+		"contracts/proxy/EIP2535/LogicTwoV2Facet.sol": {
+			"keccak256": "0x22ec7a0a3fce171784495f1f28b06d694acc5a8ff2a3723a9b9f3ee7ad38f443",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://da346545d6fb1f404417ee6f6a6c31dc9c9885931c90dd106de8533170a8b9f0",
+				"dweb:/ipfs/Qmdn7pnGoXkFNPKJEqUQsrnfvM9JXWnFqvRjUkcDQYr14b"
+			]
+		},
+		"contracts/proxy/EIP2535/LogicTwoV3Facet.sol": {
+			"keccak256": "0xa3c08bf431aac22d4d4651b776815bf1bc77e9d59c00f07524212bdcf12e43c3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2894472e5c09b148086807d39aa8c10c4206252c0cc06853493b203747e1be71",
+				"dweb:/ipfs/QmeukiwfCU9F8D15XBafCHPXQq5ZbShQB592gh4nXMYBtC"
+			]
+		},
+		"contracts/proxy/EIP2535/RegistLogicContract.sol": {
+			"keccak256": "0xd0ae0ea606ce584ba9fadd7de970c090b44f5cad9f7ebb16705cfb7d39181780",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fb38f4e2110de06a2573f09ad1260f5da00fbc0618dc7034e35eac141cae4ce5",
+				"dweb:/ipfs/QmcSeAc5WakSrsLgyJ6foXGjo9GdZoqxaurA2KxroQtKuX"
+			]
+		}
+	},
+	"version": 1
+}

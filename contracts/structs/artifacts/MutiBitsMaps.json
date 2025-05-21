@@ -1,0 +1,125 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220d426d5f024002065ee36febffc7ec7d90af165034352f99b0be8674bccb774f264736f6c634300081a0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD4 0x26 0xD5 CREATE 0x24 STOP KECCAK256 PUSH6 0xEE36FEBFFC7E 0xC7 0xD9 EXP CALL PUSH6 0x34352F99B0B 0xE8 PUSH8 0x4BCCB774F264736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "57:11044:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220d426d5f024002065ee36febffc7ec7d90af165034352f99b0be8674bccb774f264736f6c634300081a0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD4 0x26 0xD5 CREATE 0x24 STOP KECCAK256 PUSH6 0xEE36FEBFFC7E 0xC7 0xD9 EXP CALL PUSH6 0x34352F99B0B 0xE8 PUSH8 0x4BCCB774F264736F PUSH13 0x634300081A0033000000000000 ",
+			"sourceMap": "57:11044:0:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"_addressToUint256(address)": "infinite",
+				"_bytes32ToUint256(bytes32)": "infinite",
+				"_calcByteBucketAndMask(uint256)": "infinite",
+				"_calcFourBitBucketAndMask(uint256)": "infinite",
+				"_calcTwoBitBucketAndMask(uint256)": "infinite",
+				"_get(struct MutiBitsMaps.ByteMap storage pointer,uint256)": "infinite",
+				"_get(struct MutiBitsMaps.FourBitsMap storage pointer,uint256)": "infinite",
+				"_get(struct MutiBitsMaps.TwoBitsMap storage pointer,uint256)": "infinite",
+				"_set(struct MutiBitsMaps.ByteMap storage pointer,uint256,uint8)": "infinite",
+				"_set(struct MutiBitsMaps.FourBitsMap storage pointer,uint256,uint8)": "infinite",
+				"_set(struct MutiBitsMaps.TwoBitsMap storage pointer,uint256,uint8)": "infinite",
+				"get(struct MutiBitsMaps.AddressByteMap storage pointer,address)": "infinite",
+				"get(struct MutiBitsMaps.AddressFourBitsMap storage pointer,address)": "infinite",
+				"get(struct MutiBitsMaps.AddressTwoBitsMap storage pointer,address)": "infinite",
+				"get(struct MutiBitsMaps.Bytes32ByteMap storage pointer,bytes32)": "infinite",
+				"get(struct MutiBitsMaps.Bytes32FourBitsMap storage pointer,bytes32)": "infinite",
+				"get(struct MutiBitsMaps.Bytes32TwoBitsMap storage pointer,bytes32)": "infinite",
+				"get(struct MutiBitsMaps.Uint256ByteMap storage pointer,uint256)": "infinite",
+				"get(struct MutiBitsMaps.Uint256FourBitsMap storage pointer,uint256)": "infinite",
+				"get(struct MutiBitsMaps.Uint256TwoBitsMap storage pointer,uint256)": "infinite",
+				"set(struct MutiBitsMaps.AddressByteMap storage pointer,address,uint8)": "infinite",
+				"set(struct MutiBitsMaps.AddressFourBitsMap storage pointer,address,uint8)": "infinite",
+				"set(struct MutiBitsMaps.AddressTwoBitsMap storage pointer,address,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Bytes32ByteMap storage pointer,bytes32,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Bytes32FourBitsMap storage pointer,bytes32,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Bytes32TwoBitsMap storage pointer,bytes32,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Uint256ByteMap storage pointer,uint256,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Uint256FourBitsMap storage pointer,uint256,uint8)": "infinite",
+				"set(struct MutiBitsMaps.Uint256TwoBitsMap storage pointer,uint256,uint8)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint8",
+					"name": "value",
+					"type": "uint8"
+				}
+			],
+			"name": "OutOfByteValueRange",
+			"type": "error"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint8",
+					"name": "value",
+					"type": "uint8"
+				}
+			],
+			"name": "OutOfFourBitValueRange",
+			"type": "error"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint8",
+					"name": "value",
+					"type": "uint8"
+				}
+			],
+			"name": "OutOfTwoBitValueRange",
+			"type": "error"
+		}
+	]
+}

@@ -1,0 +1,262 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_logicAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AddressEmptyError",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "NotAdminError",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "msgSig",
+						"type": "bytes4"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "msgData",
+						"type": "bytes"
+					}
+				],
+				"name": "FallbackLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "logicAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "resultData",
+						"type": "bytes"
+					}
+				],
+				"name": "UpgradeAndCallLog",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAdmin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newLogicAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "upgradeLogicAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "This contract implements a transparent proxy pattern that forwards calls  to an implementation (logic) contract. It allows for upgrading the logic contract  and changing the admin, while ensuring storage layout consistency through custom  storage slots as per EIP-1967.  Features: 1. Fallback function forwards calls to the logic contract. 2. Assembly-based handling of return data in fallback. 3. Upgradable logic contract and adjustable admin permissions. 4. Consistent storage layout using custom storage slots (ERC1967 standard). 5. Initialization logic executed upon deployment or upgrades.",
+			"errors": {
+				"AddressEmptyError()": [
+					{
+						"details": "Error thrown when a zero address is provided."
+					}
+				],
+				"NotAdminError(string)": [
+					{
+						"details": "Custom error for unauthorized access attempts.",
+						"params": {
+							"data": "A descriptive error message."
+						}
+					}
+				]
+			},
+			"events": {
+				"FallbackLog(address,bytes4,bytes)": {
+					"details": "Emitted when a fallback call is forwarded to the logic contract."
+				},
+				"UpgradeAndCallLog(address,bytes,bool,bytes)": {
+					"details": "Emitted when the logic contract is upgraded and initialization logic is executed."
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"changeAdmin(address)": {
+					"details": "Allows the admin to change the admin address.",
+					"params": {
+						"_newAdmin": "The address of the new admin."
+					}
+				},
+				"constructor": {
+					"details": "Constructor that sets the initial logic contract and optionally initializes it.",
+					"params": {
+						"_logicAddress": "The address of the initial logic contract.",
+						"data": "Initialization data encoded as bytes (e.g., abi.encodeWithSignature)."
+					}
+				},
+				"getAdmin()": {
+					"details": "Retrieves the current admin address.",
+					"returns": {
+						"_0": "The address of the current admin."
+					}
+				},
+				"upgradeLogicAddress(address,bytes)": {
+					"details": "Allows the admin to upgrade the logic contract and optionally initialize it.",
+					"params": {
+						"data": "Initialization data to be executed on the new logic contract.",
+						"newLogicAddress": "The address of the new logic contract."
+					}
+				}
+			},
+			"title": "TransparentUpgradeableProxy",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/ERC1967/TransparentUpgradeableProxy.sol": "TransparentUpgradeableProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LogLibrary.sol": {
+			"keccak256": "0xc50e514cfef3bf17d4c7cf176ae622cecc29ab0d699954cf389cd6753bd111fb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b940b4d86df62b787debe5eb4800128a7edb14a4f3065214849c6ae086066ce0",
+				"dweb:/ipfs/QmcsCZNSj4uQymyNRJbYN45m933ZuT9pEcguT3WSdFNJMK"
+			]
+		},
+		"contracts/proxy/ERC1967/ERC1967Utils.sol": {
+			"keccak256": "0x4af918c77a724ccdfda2cf80a3f43380063a8620a00b6c087830a629cd12c420",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a34f5181e6b5ab199e798dff0b7264ceb7de21bcc37538de2e2e3f60a9cd1d8e",
+				"dweb:/ipfs/QmbFUKBcTf7e4mSYzNLTv1ohRZZsW5KruLTQvQv1Xrwd7H"
+			]
+		},
+		"contracts/proxy/ERC1967/ProxyAdmin.sol": {
+			"keccak256": "0x0dd5dbafc7682c06fcfec965c39cff1d67893644cb7ee6c7af0e78d535c5cb4a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b77babe4974ed67ea4a85efd6a99a49f3b730b6cf0ec9417d6df78ea5946781d",
+				"dweb:/ipfs/QmVAVHaYW8tAhESz2rhcbUFtfrs2GueLterXm21XGxr7Tn"
+			]
+		},
+		"contracts/proxy/ERC1967/TransparentUpgradeableProxy.sol": {
+			"keccak256": "0x4593c2fdb0c52037f64c61c120e6c5c4dc96ce0069696ef3bd405a58de94c687",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://31c3a1de499770aa2a26968498e617ccfe417b861e6209a9b0d291b7ee04d288",
+				"dweb:/ipfs/QmbdA3VL1FNJ7VcDkKpEdRrbWkeJC1u4TnqPhWJQXsP1iS"
+			]
+		}
+	},
+	"version": 1
+}

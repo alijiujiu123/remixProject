@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "key",
+						"type": "address"
+					},
+					{
+						"components": [
+							{
+								"internalType": "bytes4[]",
+								"name": "functionSelectors",
+								"type": "bytes4[]"
+							}
+						],
+						"internalType": "struct DiamondStorage.DiamondFacet",
+						"name": "value",
+						"type": "tuple"
+					}
+				],
+				"name": "AddressKeyZero",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "key",
+						"type": "address"
+					}
+				],
+				"name": "AddressToFacetMapNonexistentKey",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "Provides custom storage structures and utility functions for EIP-2535 (Diamond Standard).  1. Implements a customizable mapping from `bytes4` (function selectors) to `address`. 2. Provides a customizable, enumerable mapping from `address` to `DiamondFacet`, supporting extensible facet storage.",
+			"kind": "dev",
+			"methods": {},
+			"title": "DiamondStorage Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/EIP2535/DiamondStorage.sol": "DiamondStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+			"keccak256": "0x9b161e97b8967d4bc0c08d25741889a30692cdda4b71910bf1b0e315f1962212",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://821500c39d095eaa25b06f46e65f1d0e97c4c96b39227f79077dee7d9e84051f",
+				"dweb:/ipfs/QmSTeGorKzSWF6HAmxo32uCZiEuKNvreQdUiX1AaYtUMTz"
+			]
+		},
+		"contracts/proxy/EIP2535/DiamondStorage.sol": {
+			"keccak256": "0x5bb3609fecbd73b7a823710b47a2f6569fc615eca7e1d22da11f4211e68e513b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://858d3a9408cfb55afc23aa9eba9ca4eabf2551f3a49de4acc098c0e88b1b40b7",
+				"dweb:/ipfs/QmWRX3BRAybJZtqtWgPkzej8EDM5LdRYY5ysuDeZEBwNWN"
+			]
+		}
+	},
+	"version": 1
+}

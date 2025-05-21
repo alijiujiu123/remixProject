@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "generateStorageSlot",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This library manages key storage slots for an ERC1967 proxy contract, including the logic contract address (implementation) and the admin address. It also provides low-level delegatecall functionality to delegate calls to the implementation contract.",
+			"kind": "dev",
+			"methods": {
+				"generateStorageSlot(string)": {
+					"details": "Generates a storage slot based on the provided string. This function computes the keccak256 hash of the string and subtracts 1 to match the EIP-1967 standard.",
+					"params": {
+						"data": "The input string to generate the storage slot from."
+					},
+					"returns": {
+						"_0": "The generated storage slot as a bytes32 value."
+					}
+				}
+			},
+			"stateVariables": {
+				"ADMIN_SLOT": {
+					"details": "Storage slot for the admin address of the contract. This slot is defined as keccak-256(\"eip1967.proxy.admin\") minus 1. This is part of the EIP-1967 standard for secure admin address storage."
+				},
+				"IMPLEMENTATION_SLOT": {
+					"details": "Storage slot for the current implementation (logic contract) address. This slot is defined as keccak-256(\"eip1967.proxy.implementation\") minus 1. This is part of the EIP-1967 standard to avoid storage collisions."
+				}
+			},
+			"title": "ERC1967Utils",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/ERC1967/ERC1967Utils.sol": "ERC1967Utils"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proxy/ERC1967/ERC1967Utils.sol": {
+			"keccak256": "0x4af918c77a724ccdfda2cf80a3f43380063a8620a00b6c087830a629cd12c420",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a34f5181e6b5ab199e798dff0b7264ceb7de21bcc37538de2e2e3f60a9cd1d8e",
+				"dweb:/ipfs/QmbFUKBcTf7e4mSYzNLTv1ohRZZsW5KruLTQvQv1Xrwd7H"
+			]
+		}
+	},
+	"version": 1
+}

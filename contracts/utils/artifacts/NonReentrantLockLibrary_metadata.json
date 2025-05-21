@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "slotSeed",
+						"type": "string"
+					}
+				],
+				"name": "AcquireLockFailure",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "slotSeed",
+						"type": "string"
+					}
+				],
+				"name": "GetLockFailure",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "slotSeed",
+						"type": "string"
+					}
+				],
+				"name": "UnlockFailure",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "ERC7201_NAMESPACE",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Library for managing transient reentrancy locks using EIP-1153 transient storage.  Provides functions to acquire, release, and customize locks. Locks are automatically  reset at the end of transactions, ensuring safe use even in multi-call scenarios.  Key Functions: - `getLock()`: Retrieves the default lock. - `getLock(string memory seed)`: Retrieves a custom lock based on a unique seed. - `lock()` & `unlock()`: Acquire and release locks, reverting on failure. - `tryLock()` & `tryUnlock()`: Non-reverting lock functions returning success status. Example usage: ```solidity function criticalOperation() external {    // NonReentrantLockTransientLibrary.getLock() also can get a default lock    NonReentrantLockTransientLibrary.NonReentrantLock memory lock = \"critical.lock\".getLock();    lock.lock();     // Critical section code    lock.unlock(); } ```",
+			"kind": "dev",
+			"methods": {},
+			"title": "NonReentrantLockTransientLibrary",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/utils/NonReentrantLock.sol": "NonReentrantLockLibrary"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"contracts/utils/NonReentrantLock.sol": {
+			"keccak256": "0xe16e9e48fa94a7fd9fa456cae91a0e3c6f0531e35a0b0932d2f1278a2cfb8703",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d870d76d69c3eb7ef67bf16f940500ef2b7390ec6a73bbfa44a999703e4db20c",
+				"dweb:/ipfs/QmYmgZaXDYkpgCo7x77TqVjmo2GqxWBg6AjAUt1E124RTH"
+			]
+		}
+	},
+	"version": 1
+}

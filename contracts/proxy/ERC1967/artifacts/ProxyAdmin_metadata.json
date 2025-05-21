@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_adminAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "NotAdminError",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "This contract manages administrative control for an upgradeable proxy contract. It handles admin permissions and allows the admin to change the admin address securely.",
+			"errors": {
+				"NotAdminError(string)": [
+					{
+						"details": "Custom error for unauthorized access attempts.",
+						"params": {
+							"data": "A descriptive error message."
+						}
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "Initializes the contract by setting the initial admin address. The admin address is stored in the predefined ADMIN_SLOT from ERC1967Utils.",
+					"params": {
+						"_adminAddress": "The address of the initial admin."
+					}
+				}
+			},
+			"title": "ProxyAdmin",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/ERC1967/ProxyAdmin.sol": "ProxyAdmin"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proxy/ERC1967/ERC1967Utils.sol": {
+			"keccak256": "0x4af918c77a724ccdfda2cf80a3f43380063a8620a00b6c087830a629cd12c420",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a34f5181e6b5ab199e798dff0b7264ceb7de21bcc37538de2e2e3f60a9cd1d8e",
+				"dweb:/ipfs/QmbFUKBcTf7e4mSYzNLTv1ohRZZsW5KruLTQvQv1Xrwd7H"
+			]
+		},
+		"contracts/proxy/ERC1967/ProxyAdmin.sol": {
+			"keccak256": "0x0dd5dbafc7682c06fcfec965c39cff1d67893644cb7ee6c7af0e78d535c5cb4a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b77babe4974ed67ea4a85efd6a99a49f3b730b6cf0ec9417d6df78ea5946781d",
+				"dweb:/ipfs/QmVAVHaYW8tAhESz2rhcbUFtfrs2GueLterXm21XGxr7Tn"
+			]
+		}
+	},
+	"version": 1
+}

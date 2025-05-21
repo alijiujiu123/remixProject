@@ -1,0 +1,208 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212205bfea3c50259aeb7b1386692020918ba21994b10f6047b2602cd146f668b98bf64736f6c634300081a0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 JUMPDEST INVALID LOG3 0xC5 MUL MSIZE 0xAE 0xB7 0xB1 CODESIZE PUSH7 0x92020918BA2199 0x4B LT 0xF6 DIV PUSH28 0x2602CD146F668B98BF64736F6C634300081A00330000000000000000 ",
+			"sourceMap": "1399:22552:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212205bfea3c50259aeb7b1386692020918ba21994b10f6047b2602cd146f668b98bf64736f6c634300081a0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 JUMPDEST INVALID LOG3 0xC5 MUL MSIZE 0xAE 0xB7 0xB1 CODESIZE PUSH7 0x92020918BA2199 0x4B LT 0xF6 DIV PUSH28 0x2602CD146F668B98BF64736F6C634300081A00330000000000000000 ",
+			"sourceMap": "1399:22552:0:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"_at(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"_clear(struct LinkedList.List storage pointer)": "infinite",
+				"_contains(struct LinkedList.List storage pointer,bytes32)": "infinite",
+				"_get(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"_getFirst(struct LinkedList.List storage pointer)": "infinite",
+				"_getLast(struct LinkedList.List storage pointer)": "infinite",
+				"_hasNext(struct LinkedList.Node storage pointer)": "infinite",
+				"_hasPrevious(struct LinkedList.Node storage pointer)": "infinite",
+				"_isEmpty(struct LinkedList.List storage pointer)": "infinite",
+				"_link(struct LinkedList.List storage pointer,uint256,bytes32)": "infinite",
+				"_linkFirst(struct LinkedList.List storage pointer,bytes32)": "infinite",
+				"_linkLast(struct LinkedList.List storage pointer,bytes32)": "infinite",
+				"_next(struct LinkedList.Node storage pointer,struct LinkedList.List storage pointer)": "infinite",
+				"_node(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"_previous(struct LinkedList.Node storage pointer,struct LinkedList.List storage pointer)": "infinite",
+				"_set(struct LinkedList.List storage pointer,uint256,bytes32)": "infinite",
+				"_size(struct LinkedList.List storage pointer)": "infinite",
+				"_unlink(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"_unlinkFirst(struct LinkedList.List storage pointer)": "infinite",
+				"_unlinkLast(struct LinkedList.List storage pointer)": "infinite",
+				"_values(struct LinkedList.List storage pointer)": "infinite",
+				"add(struct LinkedList.AddressList storage pointer,uint256,address)": "infinite",
+				"add(struct LinkedList.Bytes32List storage pointer,uint256,bytes32)": "infinite",
+				"add(struct LinkedList.UintList storage pointer,uint256,uint256)": "infinite",
+				"addFirst(struct LinkedList.AddressList storage pointer,address)": "infinite",
+				"addFirst(struct LinkedList.Bytes32List storage pointer,bytes32)": "infinite",
+				"addFirst(struct LinkedList.UintList storage pointer,uint256)": "infinite",
+				"addLast(struct LinkedList.AddressList storage pointer,address)": "infinite",
+				"addLast(struct LinkedList.Bytes32List storage pointer,bytes32)": "infinite",
+				"addLast(struct LinkedList.UintList storage pointer,uint256)": "infinite",
+				"addressToBytes32(address)": "infinite",
+				"at(struct LinkedList.Bytes32List storage pointer,uint256)": "infinite",
+				"bytes32ToAddress(bytes32)": "infinite",
+				"checkElementIndex(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"checkPositionIndex(struct LinkedList.List storage pointer,uint256)": "infinite",
+				"clear(struct LinkedList.AddressList storage pointer)": "infinite",
+				"clear(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"clear(struct LinkedList.UintList storage pointer)": "infinite",
+				"contains(struct LinkedList.AddressList storage pointer,address)": "infinite",
+				"contains(struct LinkedList.Bytes32List storage pointer,bytes32)": "infinite",
+				"contains(struct LinkedList.UintList storage pointer,uint256)": "infinite",
+				"get(struct LinkedList.AddressList storage pointer,uint256)": "infinite",
+				"get(struct LinkedList.Bytes32List storage pointer,uint256)": "infinite",
+				"get(struct LinkedList.UintList storage pointer,uint256)": "infinite",
+				"getFirst(struct LinkedList.AddressList storage pointer)": "infinite",
+				"getFirst(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"getFirst(struct LinkedList.UintList storage pointer)": "infinite",
+				"getLast(struct LinkedList.AddressList storage pointer)": "infinite",
+				"getLast(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"getLast(struct LinkedList.UintList storage pointer)": "infinite",
+				"isBytes32Zero(bytes32)": "infinite",
+				"isEmpty(struct LinkedList.AddressList storage pointer)": "infinite",
+				"isEmpty(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"isEmpty(struct LinkedList.UintList storage pointer)": "infinite",
+				"isUint256Zero(uint256)": "infinite",
+				"remove(struct LinkedList.AddressList storage pointer,uint256)": "infinite",
+				"remove(struct LinkedList.Bytes32List storage pointer,uint256)": "infinite",
+				"remove(struct LinkedList.UintList storage pointer,uint256)": "infinite",
+				"removeFirst(struct LinkedList.AddressList storage pointer)": "infinite",
+				"removeFirst(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"removeFirst(struct LinkedList.UintList storage pointer)": "infinite",
+				"removeLast(struct LinkedList.AddressList storage pointer)": "infinite",
+				"removeLast(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"removeLast(struct LinkedList.UintList storage pointer)": "infinite",
+				"set(struct LinkedList.AddressList storage pointer,uint256,address)": "infinite",
+				"set(struct LinkedList.Bytes32List storage pointer,uint256,bytes32)": "infinite",
+				"set(struct LinkedList.UintList storage pointer,uint256,uint256)": "infinite",
+				"size(struct LinkedList.AddressList storage pointer)": "infinite",
+				"size(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"size(struct LinkedList.UintList storage pointer)": "infinite",
+				"values(struct LinkedList.AddressList storage pointer)": "infinite",
+				"values(struct LinkedList.Bytes32List storage pointer)": "infinite",
+				"values(struct LinkedList.UintList storage pointer)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"inputs": [],
+			"name": "IndexOutOfBounds",
+			"type": "error"
+		},
+		{
+			"inputs": [],
+			"name": "LinkedListNonexistentElement",
+			"type": "error"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "version",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "nodeId",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "value",
+					"type": "bytes32"
+				},
+				{
+					"indexed": false,
+					"internalType": "enum LinkedList.LinkedType",
+					"name": "linkedType",
+					"type": "uint8"
+				}
+			],
+			"name": "LinkedNode",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "version",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "uint256",
+					"name": "nodeId",
+					"type": "uint256"
+				},
+				{
+					"indexed": true,
+					"internalType": "bytes32",
+					"name": "value",
+					"type": "bytes32"
+				},
+				{
+					"indexed": false,
+					"internalType": "enum LinkedList.UnlinkedType",
+					"name": "unlinkedType",
+					"type": "uint8"
+				}
+			],
+			"name": "UnlinkedNode",
+			"type": "event"
+		}
+	]
+}

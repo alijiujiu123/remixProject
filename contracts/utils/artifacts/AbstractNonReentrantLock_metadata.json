@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Abstract contract providing reentrancy protection using transient storage (EIP-1153).  This contract leverages transient storage for efficient reentrancy protection. Transient storage automatically resets at the end of each transaction, minimizing gas costs and ensuring safe usage even in complex, multi-call scenarios.  The {nonReentrantLock} modifier applies a default lock to functions, while  {nonReentrantcustomizeLock} allows for customized, fine-grained locks using unique seeds.  Inheriting from `AbstractNonReentrantLock` will make these modifiers available for use in your contract. Example usage: ```solidity contract MyContract is AbstractNonReentrantLock {     uint256 private _balance;      // Apply a default reentrancy lock for standard operations     function deposit() external nonReentrantLock {         _balance += 1;     }      // Use a custom lock for more granular control over reentrancy protection     function withdraw() external nonReentrantcustomizeLock(\"withdraw.lock\") {         require(_balance > 0, \"Insufficient balance\");         _balance -= 1;     } } ```  TIP: Use transient storage-based locks for efficient gas savings and robust protection  against reentrancy in both simple and complex contract functions.",
+			"kind": "dev",
+			"methods": {},
+			"title": "AbstractNonReentrantLock",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/utils/AbstractNonReentrantLock.sol": "AbstractNonReentrantLock"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"contracts/utils/AbstractNonReentrantLock.sol": {
+			"keccak256": "0x4e11df8d378ebc86485139e4b7267bcd0425d074fb49240aa1143a358052e109",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8e0e0c5cf02d90973aa0052806096fd978d7c1a66494b5dd3de484c5032d8d57",
+				"dweb:/ipfs/QmaPwrH3P3YvKnTNihn24sNmvxTAX8mby1S5ps7qjvJ3p3"
+			]
+		},
+		"contracts/utils/NonReentrantLock.sol": {
+			"keccak256": "0x0dc18ba880e08c6052895fb3406fd3274b8ac7e60bbf5234cc7a2dfd7fb13b5e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00a2fb75489acc96eba129b969bcc20fa7736d622f69f50fb58843f5d874678f",
+				"dweb:/ipfs/QmPtmirQ4yKhAEkA6odEqc5cmPMViHrzLrG6PsVJQJRuUp"
+			]
+		}
+	},
+	"version": 1
+}

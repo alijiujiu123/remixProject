@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/structs/BitMaps.sol": "BitMaps"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/structs/BitMaps.sol": {
+			"keccak256": "0x84af867014e18537289a858974c8f5e1668b62f9e9048bfdfa17ef4d82094648",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0253fa2f7b79a789579e4efc29d75e1f42923a0b250ccce91eb97f9db121e18e",
+				"dweb:/ipfs/QmTbovR6XTyLF9P3ctB8a9JgJyeiK2mwmqytsVd42rdJfg"
+			]
+		}
+	},
+	"version": 1
+}

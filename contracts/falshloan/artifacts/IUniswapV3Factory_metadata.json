@@ -1,0 +1,394 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					},
+					{
+						"indexed": true,
+						"internalType": "int24",
+						"name": "tickSpacing",
+						"type": "int24"
+					}
+				],
+				"name": "FeeAmountEnabled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token0",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "token1",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					},
+					{
+						"indexed": false,
+						"internalType": "int24",
+						"name": "tickSpacing",
+						"type": "int24"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					}
+				],
+				"name": "PoolCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					}
+				],
+				"name": "createPool",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					},
+					{
+						"internalType": "int24",
+						"name": "tickSpacing",
+						"type": "int24"
+					}
+				],
+				"name": "enableFeeAmount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					}
+				],
+				"name": "feeAmountTickSpacing",
+				"outputs": [
+					{
+						"internalType": "int24",
+						"name": "",
+						"type": "int24"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint24",
+						"name": "fee",
+						"type": "uint24"
+					}
+				],
+				"name": "getPool",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "pool",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"events": {
+				"FeeAmountEnabled(uint24,int24)": {
+					"params": {
+						"fee": "The enabled fee, denominated in hundredths of a bip",
+						"tickSpacing": "The minimum number of ticks between initialized ticks for pools created with the given fee"
+					}
+				},
+				"OwnerChanged(address,address)": {
+					"params": {
+						"newOwner": "The owner after the owner was changed",
+						"oldOwner": "The owner before the owner was changed"
+					}
+				},
+				"PoolCreated(address,address,uint24,int24,address)": {
+					"params": {
+						"fee": "The fee collected upon every swap in the pool, denominated in hundredths of a bip",
+						"pool": "The address of the created pool",
+						"tickSpacing": "The minimum number of ticks between initialized ticks",
+						"token0": "The first token of the pool by address sort order",
+						"token1": "The second token of the pool by address sort order"
+					}
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"createPool(address,address,uint24)": {
+					"details": "tokenA and tokenB may be passed in either order: token0/token1 or token1/token0. tickSpacing is retrieved from the fee. The call will revert if the pool already exists, the fee is invalid, or the token arguments are invalid.",
+					"params": {
+						"fee": "The desired fee for the pool",
+						"tokenA": "One of the two tokens in the desired pool",
+						"tokenB": "The other of the two tokens in the desired pool"
+					},
+					"returns": {
+						"pool": "The address of the newly created pool"
+					}
+				},
+				"enableFeeAmount(uint24,int24)": {
+					"details": "Fee amounts may never be removed once enabled",
+					"params": {
+						"fee": "The fee amount to enable, denominated in hundredths of a bip (i.e. 1e-6)",
+						"tickSpacing": "The spacing between ticks to be enforced for all pools created with the given fee amount"
+					}
+				},
+				"feeAmountTickSpacing(uint24)": {
+					"details": "A fee amount can never be removed, so this value should be hard coded or cached in the calling context",
+					"params": {
+						"fee": "The enabled fee, denominated in hundredths of a bip. Returns 0 in case of unenabled fee"
+					},
+					"returns": {
+						"_0": "The tick spacing"
+					}
+				},
+				"getPool(address,address,uint24)": {
+					"details": "tokenA and tokenB may be passed in either token0/token1 or token1/token0 order",
+					"params": {
+						"fee": "The fee collected upon every swap in the pool, denominated in hundredths of a bip",
+						"tokenA": "The contract address of either token0 or token1",
+						"tokenB": "The contract address of the other token"
+					},
+					"returns": {
+						"pool": "The pool address"
+					}
+				},
+				"owner()": {
+					"details": "Can be changed by the current owner via setOwner",
+					"returns": {
+						"_0": "The address of the factory owner"
+					}
+				},
+				"setOwner(address)": {
+					"details": "Must be called by the current owner",
+					"params": {
+						"_owner": "The new owner of the factory"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"FeeAmountEnabled(uint24,int24)": {
+					"notice": "Emitted when a new fee amount is enabled for pool creation via the factory"
+				},
+				"OwnerChanged(address,address)": {
+					"notice": "Emitted when the owner of the factory is changed"
+				},
+				"PoolCreated(address,address,uint24,int24,address)": {
+					"notice": "Emitted when a pool is created"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"createPool(address,address,uint24)": {
+					"notice": "Creates a pool for the given two tokens and fee"
+				},
+				"enableFeeAmount(uint24,int24)": {
+					"notice": "Enables a fee amount with the given tickSpacing"
+				},
+				"feeAmountTickSpacing(uint24)": {
+					"notice": "Returns the tick spacing for a given fee amount, if enabled, or 0 if not enabled"
+				},
+				"getPool(address,address,uint24)": {
+					"notice": "Returns the pool address for a given pair of tokens and a fee, or address 0 if it does not exist"
+				},
+				"owner()": {
+					"notice": "Returns the current owner of the factory"
+				},
+				"setOwner(address)": {
+					"notice": "Updates the owner of the factory"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/falshloan/UniswapV3Data.sol": "IUniswapV3Factory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://df6f0c459663c9858b6cba2cda1d14a7d05a985bed6d2de72bd8e78c25ee79db",
+				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
+			]
+		},
+		"@openzeppelin/contracts/utils/Panic.sol": {
+			"keccak256": "0xf7fe324703a64fc51702311dc51562d5cb1497734f074e4f483bfb6717572d7a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6a5ff4f9fd8649b7ee20800b7fa387d3465bd77cf20c2d1068cd5c98e1ed57a",
+				"dweb:/ipfs/QmVSaVJf9FXFhdYEYeCEfjMVHrxDh5qL4CGkxdMWpQCrqG"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x44f87e91783e88415bde66f1a63f6c7f0076f2d511548820407d5c95643ac56c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13a51bc2b23827744dcf5bad10c69e72528cf015a6fe48c93632cdb2c0eb1251",
+				"dweb:/ipfs/QmZwPA47Yqgje1qtkdEFEja8ntTahMStYzKf5q3JRnaR7d"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0xa00be322d7db5786750ce0ac7e2f5b633ac30a5ed5fa1ced1e74acfc19acecea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c84e822f87cbdc4082533b626667b6928715bb2b1e8e7eb96954cebb9e38c8d",
+				"dweb:/ipfs/QmZmy9dgxLTerBAQDuuHqbL6EpgRxddqgv5KmwpXYVbKz1"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b1d578337048cad08c1c03041cca5978eff5428aa130c781b271ad9e5566e1f8",
+				"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+			"keccak256": "0xb1970fac7b64e6c09611e6691791e848d5e3fe410fa5899e7df2e0afd77a99e3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://db5fbb3dddd8b7047465b62575d96231ba8a2774d37fb4737fbf23340fabbb03",
+				"dweb:/ipfs/QmVUSvooZKEdEdap619tcJjTLcAuH6QBdZqAzWwnAXZAWJ"
+			]
+		},
+		"contracts/falshloan/UniswapV3Data.sol": {
+			"keccak256": "0xc595e860c0f24df9e85f4774f03ff960ef1fe88820719fd8c28032fb544d0c06",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c663b6e27662c2a47b919d232519f892b6f78814f1b0a9c3680a6c0a646351d8",
+				"dweb:/ipfs/QmeFKVz5NDnwUUg2iwA4LCbHaViUSxCHf9ycHhjsDEaNBY"
+			]
+		}
+	},
+	"version": 1
+}

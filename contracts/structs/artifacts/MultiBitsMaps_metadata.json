@@ -1,0 +1,81 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfByteValueRange",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfFourBitValueRange",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "value",
+						"type": "uint8"
+					}
+				],
+				"name": "OutOfTwoBitValueRange",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "A Solidity library for efficiently managing bitmaps with different bit-width elements (2-bit, 4-bit, and 8-bit).      This library provides storage-efficient mappings where each element takes a specific number of bits.",
+			"kind": "dev",
+			"methods": {},
+			"title": "MultiBitsMaps Library",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/structs/MutiBitsMaps.sol": "MultiBitsMaps"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/structs/MutiBitsMaps.sol": {
+			"keccak256": "0x9f9d4777e703e1a90bb343137eb2c32c018b3a22805d78487bfe30eaad28f1da",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c32d066963b8cfef112d859c7ab875dfd725f6af1b50652aa90cd5903f1a0f45",
+				"dweb:/ipfs/QmQKPk5oCtpq4bQM3UuXwojCbUUE7xoTfPjLmewRShPtM9"
+			]
+		}
+	},
+	"version": 1
+}

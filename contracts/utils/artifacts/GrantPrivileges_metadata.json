@@ -1,0 +1,195 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "AddressEmpty",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "info",
+						"type": "string"
+					}
+				],
+				"name": "OnlyAdmin",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "info",
+						"type": "string"
+					}
+				],
+				"name": "OnlyLegalOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TimeLimitZero",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "GRANTPRIVILEGES_NAMESPACE",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_timeLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "addOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAdminAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getRemainingTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Abstract contract to manage time-based access control for specific functions. Admin can grant temporary access to users, enabling functionalities like subscriptions or time-limited permissions. ## Usage Example: contract EatFoodContract is GrantPrivileges {     function eatFood(string calldata str) external view onlyOwner returns (bytes32) {         return keccak256(abi.encode(str));     } } 1. Inherit from `GrantPrivileges` in your contract. 2. Use `onlyAdmin` for admin-restricted functions and `onlyOwner` for time-limited access control. 3. Deploy your contract, and the deploying address will be the initial admin. 4. Admin can add authorized users using `addOwner()`. 5. Authorized users can access `onlyOwner` functions within the granted time frame.",
+			"kind": "dev",
+			"methods": {
+				"addOwner(address,uint256)": {
+					"details": "Adds a new authorized user with a time limit.",
+					"params": {
+						"_timeLimit": "Duration of access in seconds.",
+						"newOwner": "Address of the new user."
+					}
+				},
+				"changeAdmin(address)": {
+					"details": "Allows the current admin to transfer admin privileges to a new address.",
+					"params": {
+						"newAdmin": "Address of the new admin."
+					}
+				},
+				"constructor": {
+					"details": "Constructor sets the deploying address as the initial admin."
+				},
+				"getAdminAddress()": {
+					"details": "Public function to get the current admin address.",
+					"returns": {
+						"_0": "Admin address."
+					}
+				},
+				"getRemainingTime()": {
+					"details": "Allows authorized users to check their remaining access time.",
+					"returns": {
+						"_0": "Remaining time in seconds, or 0 if authorization has expired."
+					}
+				}
+			},
+			"title": "GrantPrivileges",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/utils/GrantPrivileges.sol": "GrantPrivileges"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"contracts/utils/GrantPrivileges.sol": {
+			"keccak256": "0xd43100daef0606ae89d228c9c29d8afe3e8d5eea6c0fd32d1399f3725d315adf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://38023629b29af27a3d67a4369c8628ae89b159e7776c56ddd0e734c2f80e752f",
+				"dweb:/ipfs/QmckPVUR5oaSctYT9oRpkLRsZnxGg4VP6Bo44GxwoVT1Jk"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/EIP2535/DiamondUtils.sol": "DiamondUtils"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/proxy/EIP2535/DiamondUtils.sol": {
+			"keccak256": "0x4bcc12a38d28a504f0ee0ebcc01721e717ac81ec268cf5c384f4c0f9415e16ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bf6cab6cae802b142a4a5920f120dfd872301624b8c43de82074f8f93b6cfec3",
+				"dweb:/ipfs/QmPiwx93vWkevM93zfd7nX4aBqQcnG5eZGuL6eztko2k6b"
+			]
+		}
+	},
+	"version": 1
+}

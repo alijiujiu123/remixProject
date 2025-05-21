@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "IndexOutOfBounds",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "LinkedListNonexistentElement",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "nodeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "value",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum LinkedList.LinkedType",
+						"name": "linkedType",
+						"type": "uint8"
+					}
+				],
+				"name": "LinkedNode",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "version",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "nodeId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "value",
+						"type": "bytes32"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum LinkedList.UnlinkedType",
+						"name": "unlinkedType",
+						"type": "uint8"
+					}
+				],
+				"name": "UnlinkedNode",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"details": "The library provides a generalized linked list structure,  supporting the storage of bytes32, uint256, and address types.  It allows operations such as adding, removing, retrieving, and updating elements,  while maintaining references to adjacent nodes for sequential navigation. A sequence of items with the ability to efficiently push and pop items (i.e. insert and remove) on both ends of the sequence (called front and back). Among other access patterns, it can be used to implement efficient LIFO and FIFO queues. Storage use is optimized, and all operations are O(1) constant time. This includes {clear}, given that the existing queue contents are left in storage. Lists have the following properties: - Elements are added, removed, and checked for existence in constant time (O(1)). - Elements are enumerated in O(n). Guarantees are made on the ordering. ```solidity contract Example {     // Add the library methods     using LinkedList for LinkedList.AddressList;     // Declare a set state variable     LinkedList.AddressList private myList; } ``` Type `bytes32` (`Bytes32List`), `uint256` (`UintList`) and `address` (`AddressList`) are supported. [WARNING] ==== Most operations, such as linking and unlinking,  have constant or linear time complexity depending on the operation’s nature. Traversing the list to retrieve all values (_values) can be costly in terms of gas,  so use it cautiously in gas-constrained contexts. ====",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/structs/LinkedList.sol": "LinkedList"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/structs/LinkedList.sol": {
+			"keccak256": "0xa0f1f80364ea87ab0af32bfd192d7bad5124e155877cd8fce2a21c57df1cb05b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://21fe886592a05169e81ee13780d97977a511d0694b097e5d5ef5652ae44395bc",
+				"dweb:/ipfs/QmRdyCw9n7HMUCWxejMbjMG7zUZic1CPRCnhBYgSSY7Z98"
+			]
+		}
+	},
+	"version": 1
+}

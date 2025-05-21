@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "lock",
+						"type": "string"
+					}
+				],
+				"name": "AcquireLockFailure",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "data",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "ERC7201_NAMESPACE",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "same",
+						"type": "bool"
+					}
+				],
+				"name": "testNonReentrantCustomizeLockFail",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testNonReentrantCustomizeLockSuccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testNonReentrantLockFail",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testNonReentrantLockSuccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/utils/TestNonReentrantLock.sol": "TestNonReentrantLock"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/TransientSlot.sol": {
+			"keccak256": "0x9303ef5a2beb555e52ce56598de205ce07ca8988fc67d073687c06cb8fc973d1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8b2e48fb42844c25e6cb38e7cfa1d91dcdc054613fd10f608833dbc677acf889",
+				"dweb:/ipfs/QmT4HQxbgpWA3fZnK4dY3eXHNCoyBvpvzNq5k7eSt5mR5t"
+			]
+		},
+		"contracts/utils/NonReentrantLockTransient.sol": {
+			"keccak256": "0xde6a68c20ee15555c0614c26e8835b9055d8f977cd302584fba4ad0369f11624",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://191da656b966798f22f9a8c82698f4ec6fef4c0ead6fb35ff53067565a0edc93",
+				"dweb:/ipfs/QmU7W4fZ1ezDPNVyg6RiBFqcpNoVgBomVpaQUQnMw1YVzd"
+			]
+		},
+		"contracts/utils/TestNonReentrantLock.sol": {
+			"keccak256": "0x5a7f94378525e69be5f4507441581c8ebe698bb806ee049ec7583ee30d5c41d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://23dec7c7b500fcf751a9f59732fa0c4bda12f69ef1410b91ba67398b2456f0b9",
+				"dweb:/ipfs/QmU5UNqxKFE4rX7tXfnh384R5xrecpDmZ11peCfXXkQtvy"
+			]
+		}
+	},
+	"version": 1
+}

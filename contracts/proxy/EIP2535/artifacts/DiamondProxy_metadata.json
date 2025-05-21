@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "diamondCutAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "diamondLoupeAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "sig",
+						"type": "bytes4"
+					}
+				],
+				"name": "FacetNotRegistered",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "diamondCutAddress",
+						"type": "address"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "facetAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum IDiamond.FacetCutAction",
+								"name": "action",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "functionSelectors",
+								"type": "bytes4[]"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct IDiamond.FacetCut[]",
+						"name": "_diamondCut",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "resultData",
+						"type": "bytes"
+					}
+				],
+				"name": "InitCalldataExecuted",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "funcSign",
+						"type": "string"
+					}
+				],
+				"name": "getSelector",
+				"outputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getSelector(string)": {
+					"details": "Computes the function selector from a given function signature string. Example: \"transfer(address,uint256)\" returns the selector for the transfer function.",
+					"params": {
+						"funcSign": "The function signature as a string."
+					},
+					"returns": {
+						"_0": "The bytes4 function selector."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/proxy/EIP2535/DiamondProxy.sol": "DiamondProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/SlotDerivation.sol": {
+			"keccak256": "0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb",
+				"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b",
+				"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM"
+			]
+		},
+		"@openzeppelin/contracts/utils/structs/EnumerableSet.sol": {
+			"keccak256": "0x9b161e97b8967d4bc0c08d25741889a30692cdda4b71910bf1b0e315f1962212",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://821500c39d095eaa25b06f46e65f1d0e97c4c96b39227f79077dee7d9e84051f",
+				"dweb:/ipfs/QmSTeGorKzSWF6HAmxo32uCZiEuKNvreQdUiX1AaYtUMTz"
+			]
+		},
+		"contracts/proxy/EIP2535/CommonStorage.sol": {
+			"keccak256": "0x7c51885989588f5f290980252b53498f3be9afb4522db7bd43859736384bac77",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://589c1a9521f3d393b56525512c2a85688173412cf280dd1998e02148fb7275b7",
+				"dweb:/ipfs/QmTbBFPXweXcTRma9ByzcLZn5wfAVcFmXbfK39uyi4Ce8r"
+			]
+		},
+		"contracts/proxy/EIP2535/DiamondProxy.sol": {
+			"keccak256": "0x948fe807328cfecfdc8e66285110babc8622ff03a3e056c3effaba49ec73e66a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4a2cc727ee9611d5e9c29c10d1ebab336e7076a5e3548ca3aa72752534151e0c",
+				"dweb:/ipfs/QmRTRq1ReCKD6QTWZ1smGNsjcLdBbMYsnwTmDu4sWdapzz"
+			]
+		},
+		"contracts/proxy/EIP2535/DiamondStorage.sol": {
+			"keccak256": "0x5bb3609fecbd73b7a823710b47a2f6569fc615eca7e1d22da11f4211e68e513b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://858d3a9408cfb55afc23aa9eba9ca4eabf2551f3a49de4acc098c0e88b1b40b7",
+				"dweb:/ipfs/QmWRX3BRAybJZtqtWgPkzej8EDM5LdRYY5ysuDeZEBwNWN"
+			]
+		},
+		"contracts/proxy/EIP2535/DiamondUtils.sol": {
+			"keccak256": "0x4bcc12a38d28a504f0ee0ebcc01721e717ac81ec268cf5c384f4c0f9415e16ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bf6cab6cae802b142a4a5920f120dfd872301624b8c43de82074f8f93b6cfec3",
+				"dweb:/ipfs/QmPiwx93vWkevM93zfd7nX4aBqQcnG5eZGuL6eztko2k6b"
+			]
+		},
+		"contracts/proxy/EIP2535/IDiamond.sol": {
+			"keccak256": "0x152a5941fe585b619dd0f433eca108ddcfe371910bd848c33e558acfa7ab0cd3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://616d35a7f4e29c9023ff667e0924436e7e88ac24bbd67f1f8b5e175a805241ab",
+				"dweb:/ipfs/QmPnsF7pCMgWSUdK261YoNpAT36DhHuMWocX5HuKRh96bo"
+			]
+		},
+		"contracts/proxy/EIP2535/IDiamondCut.sol": {
+			"keccak256": "0xb1dcb551aadacc6c46c8fdf069651dd1a6d36f418ebd63bab88b3c4aa9a29c7e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cec7d85802c2f367d588d4d6493deea2dce0762c13977c1280dca93f770560da",
+				"dweb:/ipfs/QmZ472KAtqjuLFvx7rJEEq9STjfRdzR9kuC8Lv2SMHHbgu"
+			]
+		},
+		"contracts/proxy/EIP2535/IDiamondLoupe.sol": {
+			"keccak256": "0xc78b43f5af45089bbe54a37795c3debfe351d60ec0b7428a3c2c03f412b8a3e4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c31a23aeba13823bc77516db74c1252cccca6db10f2eadab49d8b81a7171afbc",
+				"dweb:/ipfs/QmeBXiVnHxNhMQPE77zN2GniUDpw4iMqZ3nLDnqcytE4mF"
+			]
+		}
+	},
+	"version": 1
+}

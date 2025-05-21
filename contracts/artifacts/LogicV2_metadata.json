@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "InitailizerCallRepeat",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "decrea",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCounter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increa",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "increaBy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/TransparentUpgradeableProxy.sol": "LogicV2"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ERC1967Utils.sol": {
+			"keccak256": "0x3d90c274e712ae825f8835fba68da0d8e879e69535edbbd1d4fe115dfc4240a4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fae94dc25928eca2920ebb2f65d55f93bbd9519425c1c5908586f1d792e3fdda",
+				"dweb:/ipfs/QmQyoP1EPSVv2dN9GSCpFHqTGFcm4o7NeakqEoJnXErgTM"
+			]
+		},
+		"contracts/LogLibrary.sol": {
+			"keccak256": "0xc50e514cfef3bf17d4c7cf176ae622cecc29ab0d699954cf389cd6753bd111fb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b940b4d86df62b787debe5eb4800128a7edb14a4f3065214849c6ae086066ce0",
+				"dweb:/ipfs/QmcsCZNSj4uQymyNRJbYN45m933ZuT9pEcguT3WSdFNJMK"
+			]
+		},
+		"contracts/TransparentUpgradeableProxy.sol": {
+			"keccak256": "0xd664cda97bb546b068d73d4e6ce7cdaf4f8ca3c5c7ed636f621bf3d78933313b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7c4d168a85f1875fcbe1b794140a6089b5b9e949b13ca141ad7506c778bd9a5",
+				"dweb:/ipfs/QmU1s8X999jTXwv6UX5CoBCed7JkZT8mS6dtDhF3vnpT3f"
+			]
+		}
+	},
+	"version": 1
+}
