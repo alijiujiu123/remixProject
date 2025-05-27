@@ -190,8 +190,18 @@
 						}
 					],
 					"internalType": "struct IUniswapV3Data.PoolInfo[]",
-					"name": "",
+					"name": "poolInfoArray",
 					"type": "tuple[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "latestBlockNumber",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "blockHash",
+					"type": "bytes32"
 				}
 			],
 			"stateMutability": "view",
@@ -300,8 +310,18 @@
 						}
 					],
 					"internalType": "struct IUniswapV3Data.PoolInfo[]",
-					"name": "",
+					"name": "poolInfoArray",
 					"type": "tuple[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "latestBlockNumber",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "blockHash",
+					"type": "bytes32"
 				}
 			],
 			"stateMutability": "view",

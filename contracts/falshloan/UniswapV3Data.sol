@@ -129,9 +129,9 @@ interface IUniswapV3Data {
         int128 liquidityNet;
     }
     // 获取uniswapV3Pool数据
-    function getPoolInfo(address factoryAddress, PoolParam[] calldata poolParams) external view returns (PoolInfo[] memory);
+    function getPoolInfo(address factoryAddress, PoolParam[] calldata poolParams) external view returns (PoolInfo[] memory poolInfoArray, uint256 latestBlockNumber, bytes32 blockHash);
     // 获取uniswapV3Pool数据: 不获取并返回ticks数据
-    function getPoolInfoWithoutTickData(address factoryAddress, PoolParam[] calldata poolParams) external view returns (PoolInfo[] memory);
+    function getPoolInfoWithoutTickData(address factoryAddress, PoolParam[] calldata poolParams) external view returns (PoolInfo[] memory poolInfoArray, uint256 latestBlockNumber, bytes32 blockHash);
     // 查询pool状态数据
     function getPoolStateData(address poolAddress) external view returns (uint160 sqrtPriceX96,int24 tick, uint128 liquidity);
     // 查询pool的tick数据
@@ -148,10 +148,9 @@ interface IUniswapV3Data {
 contract UniswapV3Data is IUniswapV3Data {
     
     // 获取uniswapV3Pool数据
-    function getPoolInfo(address factoryAddress, PoolParam[] calldata poolParams) public view returns (PoolInfo[] memory) {
+    function getPoolInfo(address factoryAddress, PoolParam[] calldata poolParams) public view returns (PoolInfo[] memory poolInfoArray, uint256 latestBlockNumber, bytes32 blockHash) {
         uint len = poolParams.length;
-        PoolInfo[] memory poolInfoArray = new PoolInfo[](len);
-        poolInfoArray = getPoolInfoWithoutTickData(factoryAddress, poolParams);
+        (poolInfoArray, latestBlockNumber, blockHash) = getPoolInfoWithoutTickData(factoryAddress, poolParams);
         for(uint i=0; i<len; i++) {
             address poolAddress = poolInfoArray[i].poolAddress;
             // 查询
@@ -160,15 +159,18 @@ contract UniswapV3Data is IUniswapV3Data {
                 poolInfoArray[i].ticks = getPoolTicks(poolAddress, poolInfoArray[i].tickSpacing);
             }
         }
-        return poolInfoArray;
     }
-    function getPoolInfoWithoutTickData(address factoryAddress, PoolParam[] calldata poolParams) public view returns (PoolInfo[] memory) {
+    function getPoolInfoWithoutTickData(address factoryAddress, PoolParam[] calldata poolParams) public view returns (PoolInfo[] memory poolInfoArray, uint256 latestBlockNumber, bytes32 blockHash) {
         IUniswapV3Factory factory = IUniswapV3Factory(factoryAddress);
         uint len = poolParams.length;
-        PoolInfo[] memory poolInfoArray = new PoolInfo[](len);
+        poolInfoArray = new PoolInfo[](len);
+        // latest区块号
+        latestBlockNumber = block.number-1;
+        blockHash = blockhash(latestBlockNumber);
         for(uint i=0; i<len; i++) {
             // 查询
             address poolAddress = factory.getPool(poolParams[i]._token0Address, poolParams[i]._token1Address, poolParams[i].fee);
+            
             if (poolAddress != address(0)) {
                 poolInfoArray[i].poolAddress = poolAddress;
                 poolInfoArray[i].token0 = IUniswapV3PoolImmutables(poolAddress).token0();
@@ -182,7 +184,6 @@ contract UniswapV3Data is IUniswapV3Data {
                 poolInfoArray[i].liquidity = liquidity;
             }
         }
-        return poolInfoArray;
     }
     // 查询pool状态数据
     function getPoolStateData(address poolAddress) public view returns (uint160 sqrtPriceX96,int24 tick, uint128 liquidity) {
