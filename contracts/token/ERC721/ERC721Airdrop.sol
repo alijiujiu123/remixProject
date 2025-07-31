@@ -18,6 +18,7 @@ contract ERC721Airdrop is ERC721Enumerable,Pausable {
     BitMaps.AddressBitMap private dropAddresses;
 
     error AirdropMerkleProofFailure();
+    event ClaimNFTValidFail(address indexed sender,bytes32[] proof, bytes32 leaf, bytes32 calcRoot);
     constructor() ERC721(_name, _symbol) {
         admin = msg.sender;
     }
@@ -108,6 +109,7 @@ contract ERC721Airdrop is ERC721Enumerable,Pausable {
         require(!dropAddresses.get(msg.sender),"already claimed");
         bytes32 leaf = bytes32(keccak256(abi.encodePacked(msg.sender)));
         if (!_verify(merkleProofs, _merkleRoot, leaf)) {
+            emit ClaimNFTValidFail(msg.sender, merkleProofs, leaf, _processProof(merkleProofs, leaf));
             revert AirdropMerkleProofFailure();
         }
         uint256 tokenId = tokenCounter++;
@@ -122,7 +124,7 @@ contract ERC721Airdrop is ERC721Enumerable,Pausable {
     }
 
     // 返回计算得出的root
-    function _processProof(bytes32[] calldata proof, bytes32 leaf) private pure returns (bytes32) {
+    function _processProof(bytes32[] memory proof, bytes32 leaf) private pure returns (bytes32) {
         bytes32 computeHash = leaf;
         for (uint i=0; i<proof.length; i++) {
             computeHash = commutativeKeccak256(computeHash, proof[i]);

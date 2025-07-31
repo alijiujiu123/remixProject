@@ -1,0 +1,133 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "MultiAirdropETHFail",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "MultiAirdropETHRebackFail",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_addresses",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "multiTransferToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/token/ERC20/GeneralAirdrop.sol": "GeneralAirdrop"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xe06a3f08a987af6ad2e1c1e774405d4fe08f1694b67517438b467cecf0da0ef7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://df6f0c459663c9858b6cba2cda1d14a7d05a985bed6d2de72bd8e78c25ee79db",
+				"dweb:/ipfs/QmeTTxZ7qVk9rjEv2R4CpCwdf8UMCcRqDNMvzNxHc3Fnn9"
+			]
+		},
+		"contracts/token/ERC20/GeneralAirdrop.sol": {
+			"keccak256": "0x5bbdede550eb41d0455f6b312fea83c68bb07a7514be7ee3013dfb5a18ee6c71",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9fe355ac59e5f9d23b6dff0b0b72dcc09ee15ed9067d75a33cba886e341325ad",
+				"dweb:/ipfs/QmZEnxW7ZfvaTWofjefDHYCjNMqSaqsisbq3tcJHvduA79"
+			]
+		}
+	},
+	"version": 1
+}

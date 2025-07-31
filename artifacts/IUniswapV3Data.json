@@ -1,0 +1,425 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"extractInitializedTicks(uint256[],int16,int24)": "919d472f",
+			"getPoolInfo(address,(address,address,uint24)[])": "6eb35eab",
+			"getPoolInfoWithoutTickData(address,(address,address,uint24)[])": "06449dd5",
+			"getPoolStateData(address)": "cef2c939",
+			"getPoolTicks(address,int24)": "98fcd0d3",
+			"tickToWord(int24,int24)": "508e1e44"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "uint256[]",
+					"name": "tickBitMaps",
+					"type": "uint256[]"
+				},
+				{
+					"internalType": "int16",
+					"name": "minWordPos",
+					"type": "int16"
+				},
+				{
+					"internalType": "int24",
+					"name": "tickSpacing",
+					"type": "int24"
+				}
+			],
+			"name": "extractInitializedTicks",
+			"outputs": [
+				{
+					"internalType": "int24[]",
+					"name": "",
+					"type": "int24[]"
+				}
+			],
+			"stateMutability": "pure",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "factoryAddress",
+					"type": "address"
+				},
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "_token0Address",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "_token1Address",
+							"type": "address"
+						},
+						{
+							"internalType": "uint24",
+							"name": "fee",
+							"type": "uint24"
+						}
+					],
+					"internalType": "struct IUniswapV3Data.PoolParam[]",
+					"name": "poolParams",
+					"type": "tuple[]"
+				}
+			],
+			"name": "getPoolInfo",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "poolAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "token0",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "token0Balance",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "token1",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "token1Balance",
+							"type": "uint256"
+						},
+						{
+							"internalType": "int24",
+							"name": "tickSpacing",
+							"type": "int24"
+						},
+						{
+							"internalType": "uint160",
+							"name": "sqrtPriceX96",
+							"type": "uint160"
+						},
+						{
+							"internalType": "int24",
+							"name": "tick",
+							"type": "int24"
+						},
+						{
+							"internalType": "uint128",
+							"name": "liquidity",
+							"type": "uint128"
+						},
+						{
+							"components": [
+								{
+									"internalType": "int24",
+									"name": "tick",
+									"type": "int24"
+								},
+								{
+									"internalType": "uint128",
+									"name": "liquidityGross",
+									"type": "uint128"
+								},
+								{
+									"internalType": "int128",
+									"name": "liquidityNet",
+									"type": "int128"
+								}
+							],
+							"internalType": "struct IUniswapV3Data.PoolTick[]",
+							"name": "ticks",
+							"type": "tuple[]"
+						}
+					],
+					"internalType": "struct IUniswapV3Data.PoolInfo[]",
+					"name": "poolInfoArray",
+					"type": "tuple[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "latestBlockNumber",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "blockHash",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "factoryAddress",
+					"type": "address"
+				},
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "_token0Address",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "_token1Address",
+							"type": "address"
+						},
+						{
+							"internalType": "uint24",
+							"name": "fee",
+							"type": "uint24"
+						}
+					],
+					"internalType": "struct IUniswapV3Data.PoolParam[]",
+					"name": "poolParams",
+					"type": "tuple[]"
+				}
+			],
+			"name": "getPoolInfoWithoutTickData",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "poolAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "address",
+							"name": "token0",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "token0Balance",
+							"type": "uint256"
+						},
+						{
+							"internalType": "address",
+							"name": "token1",
+							"type": "address"
+						},
+						{
+							"internalType": "uint256",
+							"name": "token1Balance",
+							"type": "uint256"
+						},
+						{
+							"internalType": "int24",
+							"name": "tickSpacing",
+							"type": "int24"
+						},
+						{
+							"internalType": "uint160",
+							"name": "sqrtPriceX96",
+							"type": "uint160"
+						},
+						{
+							"internalType": "int24",
+							"name": "tick",
+							"type": "int24"
+						},
+						{
+							"internalType": "uint128",
+							"name": "liquidity",
+							"type": "uint128"
+						},
+						{
+							"components": [
+								{
+									"internalType": "int24",
+									"name": "tick",
+									"type": "int24"
+								},
+								{
+									"internalType": "uint128",
+									"name": "liquidityGross",
+									"type": "uint128"
+								},
+								{
+									"internalType": "int128",
+									"name": "liquidityNet",
+									"type": "int128"
+								}
+							],
+							"internalType": "struct IUniswapV3Data.PoolTick[]",
+							"name": "ticks",
+							"type": "tuple[]"
+						}
+					],
+					"internalType": "struct IUniswapV3Data.PoolInfo[]",
+					"name": "poolInfoArray",
+					"type": "tuple[]"
+				},
+				{
+					"internalType": "uint256",
+					"name": "latestBlockNumber",
+					"type": "uint256"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "blockHash",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "poolAddress",
+					"type": "address"
+				}
+			],
+			"name": "getPoolStateData",
+			"outputs": [
+				{
+					"internalType": "uint160",
+					"name": "sqrtPriceX96",
+					"type": "uint160"
+				},
+				{
+					"internalType": "int24",
+					"name": "tick",
+					"type": "int24"
+				},
+				{
+					"internalType": "uint128",
+					"name": "liquidity",
+					"type": "uint128"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "poolAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "int24",
+					"name": "tickSpacing",
+					"type": "int24"
+				}
+			],
+			"name": "getPoolTicks",
+			"outputs": [
+				{
+					"components": [
+						{
+							"internalType": "int24",
+							"name": "tick",
+							"type": "int24"
+						},
+						{
+							"internalType": "uint128",
+							"name": "liquidityGross",
+							"type": "uint128"
+						},
+						{
+							"internalType": "int128",
+							"name": "liquidityNet",
+							"type": "int128"
+						}
+					],
+					"internalType": "struct IUniswapV3Data.PoolTick[]",
+					"name": "",
+					"type": "tuple[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "int24",
+					"name": "tick",
+					"type": "int24"
+				},
+				{
+					"internalType": "int24",
+					"name": "tickSpacing",
+					"type": "int24"
+				}
+			],
+			"name": "tickToWord",
+			"outputs": [
+				{
+					"internalType": "int16",
+					"name": "",
+					"type": "int16"
+				}
+			],
+			"stateMutability": "pure",
+			"type": "function"
+		}
+	]
+}
